@@ -17,7 +17,7 @@
 
 **Create a pv**  
 ex: create a pv "haowangpv"
-   oc create -f http://<ip>:8000/volumes/haowangpv  
+   oc create -f http://{nfs_server}:8000/volumes/haowangpv  
    
 **Notes**  
-    when invoke http://<nfs_server>:8000/volumes/{volumename},This will create a directory <volumename> under /nfs/volumes/ in the nfs server, and the directory permision will be 777, the owner will be nfsnobody:nfsnobody, after created the folder , will update the nfs configuration file /etc/exports ,then invoke "exportfs -r" command. this API will return a PV definition json file that can be used to create a pv.  
+    when invoke http://{nfs_server}:8000/volumes/{volumename},This will create a directory {volumename} under /nfs/volumes/ in the nfs server, and the directory permision will be 777, the owner will be nfsnobody:nfsnobody, after created the folder , will update the nfs configuration file /etc/exports ,then invoke "exportfs -r" command. this API will return a PV definition json file that can be used to create a pv.  
