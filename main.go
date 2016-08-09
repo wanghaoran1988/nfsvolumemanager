@@ -100,7 +100,7 @@ func volumeHandler(req *Request, resp *Response) {
 	//if storage := req.Request.Form.Get("storage"); len(storage) == 0 {
 	//	storage = "512Mi"
 	//}
-	storage := "512Mi"
+	storage := "2Gi"
 	//var policy string
 	//if policy := req.HeaderParameter("policy"); len(policy) == 0 {
 	//	println("policy:" + policy)
